@@ -23,9 +23,6 @@ frameworkVersion: '3'
 provider:
   name: aws
   runtime: python3.8
-
-# you can overwrite defaults here
-#  stage: dev
   region: us-west-2
 
 # you can add statements to the Lambda function's IAM Role here
@@ -57,6 +54,8 @@ provider:
 #    - '!exclude-me-dir/**'
 #    - include-me.py
 #    - include-me-dir/**
+plugins:
+  - serverless-python-requirements
 
 functions:
   hellos:
